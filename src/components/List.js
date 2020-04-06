@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Brew = ({name, city, phone, website_url}) => {
+const List = ({name, city, phone, website_url}) => {
     return (
-        <div className='tc grow green'>
+        <div className='tc grow bg-light-green br3 pa3 ma2 dib bw2 shadow-5'>
            <div>
              <h2>{name}</h2>  
              <p>
@@ -19,4 +19,4 @@ const Brew = ({name, city, phone, website_url}) => {
 
 }
 
-export default Brew;
+export default List;
