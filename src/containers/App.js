@@ -24,18 +24,26 @@ class App extends Component {
 
   render() {
     const { beers, searchfield } = this.state;
-    const filteredBeers = beers.filter(drinks =>{
-      return drinks.name.toLowerCase().includes(searchfield.toLowerCase());
+    const filteredBeers = beers.filter(beers =>{
+      return beers.city.toLowerCase().includes(searchfield.toLowerCase());
     })
+    
+    
     return !beers.length ?
       <h1>Loading</h1> :
       (
         <div className='tc'>
           <h1 className='f1'>Virginia Breweries</h1>
+          <h3>Search By City</h3>
           <SearchBox searchChange={this.onSearchChange}/>
-          
-            <BrewList beers={filteredBeers} />
-        
+             <div className="container">
+               <div className="cards">
+               <BrewList beers={filteredBeers} />
+               </div>
+            </div>
+        <div>
+          <footer></footer>
+        </div>
         </div>
       );
   }

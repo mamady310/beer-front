@@ -1,7 +1,12 @@
 
 h2 {
+  color: orange;
   font-family: cursive;
 }
 li {
+  color: orange;
   list-style: none;
+}
+footer {
+  margin-top: 30px;
 }
