@@ -12,6 +12,7 @@ const BrewList = ({ beers }) => {
                 id={beers[i].id}
                 name={beers[i].name}
                 city={beers[i].city} 
+                website_url={beers[i].website_url}
               />
           );
         })

@@ -8,9 +8,12 @@ class App extends Component {
     super()
     this.state = {
       beers: [],
+      pics: [],
       searchfield: ''
     }
   }
+  
+
 
   componentDidMount() {
     fetch('https://breweries-back.herokuapp.com/')
@@ -33,7 +36,8 @@ class App extends Component {
       <h1>Loading</h1> :
       (
         <div className='tc'>
-          <h1 className='f1'>Virginia Breweries</h1>
+          <h1 className="title">Virginia Breweries</h1>
+          <h2 className="sub">Directory of Breweries in Virginia</h2>
           <h3>Search By City</h3>
           <SearchBox searchChange={this.onSearchChange}/>
              <div className="container">
